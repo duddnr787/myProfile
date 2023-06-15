@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gasoek+One&family=Orbit&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b2dcccecd2.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f8f8;
+      color: #000;
+      padding: 0 30px;
+      text-align: center;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    header i:hover,
+    h1:hover {
+      cursor: pointer;
+    }
+
+    header h1 {
+      font-family: 'Orbit', sans-serif;
+    }
+
+    .header_icon {
+      width: 200px;
+    }
+
+    .header_icon i {
+      width: 50px;
+    }
+
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+      text-align: center;
+      margin-right: 50px;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 5px;
+    }
+
+    li {
+      display: inline-block;
+      padding: 10px;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    li:hover {
+      cursor: pointer;
+      color: rgb(199, 199, 245);
+      transition: all 0.5s;
+    }
+
+    li:active {
+      cursor: pointer;
+      color: rgb(199, 199, 245);
+    }
+
+    .more {
+      cursor: pointer;
+      background-color: rgb(199, 199, 245);
+      font-size: 20px;
+      letter-spacing: 3px;
+      color: #000;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    main {
+      margin: 20px;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .main_wrap {
+      display: flex;
+    }
+
+    .main_wrap img {
+      display: block;
+      margin-right: 100px;
+      border-radius: 50%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info div {
+      margin: 0 auto;
+    }
+
+    table {
+      width: 100%;
+      margin-right: 500px;
+      font-size: 30px;
+    }
+
+    .info table {
+      border: none;
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 10px;
+    }
+
+    td {
+      color: #777777;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #555555;
+      font-size: 24px;
+      width: 445px;
+    }
+
+    ol {
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 20px;
+      color: #333333;
+    }
+
+    .section_icon {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      margin-left: 50px;
+      margin-bottom: 100px;
+    }
+
+    .section_icon i {
+      cursor: pointer;
+      color: #b6b6b6;
+    }
+
+    .section_icon i:nth-child(4) {
+      margin-right: 30px;
+    }
+
+    #profile_one {
+      display: block;
+    }
+
+    #profile_two {
+      display: none;
+    }
+
+    .profile_wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px;
+      padding: 60px;
+      background: linear-gradient(135deg, #405de6, #833ab4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .profile_wrap ol {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+    }
+
+    .profile_wrap img {
+      width: 400px;
+      height: 300px;
+      border-radius: 5px;
+      border: 1px solid #ededed;
+      display: none;
+    }
+
+    .profile_wrap ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 300px;
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      color: #000;
+      padding: 10px;
+      text-align: center;
+      bottom: 0;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-out {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Portfolio <i class="fa-solid fa-caret-down"></i></h1>
+    <div class="header_icon">
+      <i class="fa-solid fa-user-plus fa-2x"></i>
+      <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+  </header>
+  <main>
+    <section class="main_wrap">
+      <img src="./img/송도의 밤.jpeg" alt="나의 사진" width="200px" height="200px">
+      <div class="info">
+        <table>
+          <thead>
+            <th>김영욱</th>
+            <th>28</th>
+            <th>인천</th>
+          </thead>
+          <tbody>
+            <td>이름</td>
+            <td>나이</td>
+            <td>거주지</td>
+          </tbody>
+        </table>
+        <div class="more">
+          <i class="fa-sharp fa-regular fa-circle-play">더 알아보기</i>
+        </div>
+      </div>
+    </section>
+    <section class="section_icon">
+      <i class="fa-solid fa-user fa-3x" onclick="contentSwitching('profile_one')"></i>
+      <i class="fa-solid fa-pencil fa-3x" onclick="contentSwitching('profile_two')"></i>
+      <i class="fa-solid fa-bars fa-3x" onclick="contentSwitching('profile_three')"></i>
+      <i class="fa-solid fa-font-awesome fa-3x" onclick="contentSwitching('profile_four')"></i>
+    </section>
+    <section id="profile_one">
+      <div class="profile_wrap">
+        <ul>
+          <li id="mbti" onclick="toggle(id, 'ENFP', 'MBTI','profile_img1')">MBTI</li>
+          <li id="hobby" onclick="toggle(id, '풋살, 여행', '취미', 'profile_img2')">취미</li>
+          <li id="job" onclick="toggle(id, '리액트를 사용하는 회사', '취업희망', 'profile_img3')">취업희망</li>
+        </ul>
+        <div>
+          <img id="profile_img1"
+            src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/2oXO/image/jleV8evDSieki7HqH78iZvi17dE.PNG"
+            alt="MBTI 이미지">
+          <img id="profile_img2" src="./img/풋살이미지.JPG" alt="취미 이미지">
+          <img id="profile_img3"
+            src="https://images.velog.io/images/junghyeonsu/post/2bca5924-249a-42d4-a8b7-1a320eb5c630/%EB%A6%AC%EC%95%A1%ED%8A%B8%20CRA.gif"
+            alt="리액트 이미지">
+        </div>
+      </div>
+    </section>
+    <section id="profile_two">
+      <div class="profile_wrap">
+        <h2>저는 이런 것들을 좋아하고 공부하고 싶어요!</h2>
+        <ol>
+          <li>만든 것이 눈에 보이는 것을 좋아해요 👀</li>
+          <li>IDE는 VSC를 좋아해요 👍</li>
+          <li>리액트를 Deep하게 공부하고 싶어요 ✏️</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; KIM YOUNG WOOK</p>
+  </footer>
+  <script>
+    function toggle(a, b, c, d) {
+      var images = document.querySelectorAll('img[id^="profile"]');
+      var element = document.getElementById(a);
+
+      element.innerHTML = (element.innerHTML === b) ? c : b;
+      images.forEach(function (image) {
+        if (image.id === d) {
+          if (element.innerHTML === c) {
+            image.style.display = 'none';
+            image.style.animation = 'fade-in 0.5s ';
+          } else {
+            image.style.display = 'block';
+            image.style.animation = 'fade-out 0.5s ease-out';
+          }
+        } else {
+          image.style.display = 'none';
+        }
+      })
+    }
+
+    function contentSwitching(a) {
+      var sections = document.querySelectorAll('section[id^="profile"]');
+
+      sections.forEach(function (section) {
+        if (section.id === a) {
+          if (section.style.display === 'none') {
+            section.style.display = 'block';
+            section.style.animation = 'fade-in 0.5s ease-in';
+          } else {
+            section.style.display = 'none';
+            section.style.animation = 'fade-out 0.5s ease-out';
+          }
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
